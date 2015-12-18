@@ -7,6 +7,7 @@ import (
 func main() {
 	db := rocksdb.NewRocksDB()
 	db.Open()
+	db.Put()
 	db.Close()
 	println("hello")
 }

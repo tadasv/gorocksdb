@@ -23,4 +23,9 @@ void DBClose(DBEngine *db) {
     delete db;
 }
 
+void DBPut(DBEngine *db) {
+    std::string value;
+    rocksdb::Status s = db->handle->Put(rocksdb::WriteOptions(), "key", "value");
+}
+
 }

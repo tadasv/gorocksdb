@@ -9,6 +9,7 @@ typedef struct DBEngine DBEngine;
 
 int DBOpen(DBEngine **db);
 void DBClose(DBEngine *db);
+void DBPut(DBEngine *db);
 
 #ifdef __cplusplus
 }

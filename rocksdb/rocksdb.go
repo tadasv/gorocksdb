@@ -42,3 +42,12 @@ func (r *RocksDB) Close() error {
 	C.DBClose(r.db)
 	return nil
 }
+
+func (r *RocksDB) Put() error {
+	if r.db == nil {
+		return nil
+	}
+
+	C.DBPut(r.db)
+	return nil
+}
